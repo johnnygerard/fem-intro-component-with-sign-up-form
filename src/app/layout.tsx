@@ -48,7 +48,12 @@ const RootLayout = ({ children }: Props) => {
       className={cn(geistSans.variable, "font-sans antialiased")}
       lang="en-US"
     >
-      <body>
+      <body
+        className={cn(
+          "bg-[#FF7979] bg-[url('/asset/image/background-mobile.svg')] bg-center",
+          "dt:bg-[url('/asset/image/background-desktop.svg')]",
+        )}
+      >
         {children}
         <Noscript />
       </body>
