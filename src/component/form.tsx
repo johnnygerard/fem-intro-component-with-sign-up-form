@@ -1,15 +1,28 @@
+"use client";
 import { FormField } from "@/component/form-field";
 import { cn } from "@/util/cn";
 import Link from "next/link";
-import { memo } from "react";
+import { memo, useState } from "react";
 
 type Props = {
   className?: string;
 };
 
 export const Form = memo(({ className }: Props) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   return (
     <form
+      noValidate
+      onSubmit={(event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        setIsSubmitted(true);
+        if (!form.checkValidity()) return;
+
+        const formData = new FormData(form);
+        console.debug(Object.fromEntries(formData));
+      }}
       className={cn(
         "p-6 shadow-[0_0.5rem_rgba(0,0,0,0.15)]",
         "w-full max-w-135 rounded-[0.625rem] bg-white",
@@ -18,24 +31,61 @@ export const Form = memo(({ className }: Props) => {
     >
       <div className="flex flex-col gap-4 dt:gap-5">
         <FormField
-          type="text"
           autoComplete="given-name"
+          defaultValue=""
+          isSubmitted={isSubmitted}
+          name="first-name"
           placeholder="First Name"
-        />
-        <FormField
+          required
           type="text"
+          validate={(input: HTMLInputElement): string =>
+            input.validity.valueMissing ? "First Name cannot be empty" : ""
+          }
+        />
+        <FormField
           autoComplete="family-name"
+          defaultValue=""
+          isSubmitted={isSubmitted}
+          name="last-name"
           placeholder="Last Name"
+          required
+          type="text"
+          validate={(input: HTMLInputElement): string =>
+            input.validity.valueMissing ? "Last Name cannot be empty" : ""
+          }
         />
         <FormField
-          type="email"
           autoComplete="email"
+          defaultValue=""
+          isSubmitted={isSubmitted}
+          name="email"
           placeholder="Email Address"
+          required
+          type="email"
+          validate={(input: HTMLInputElement): string =>
+            input.validity.valueMissing
+              ? "Email cannot be empty"
+              : input.validity.typeMismatch
+                ? "Looks like this is not an email"
+                : ""
+          }
         />
         <FormField
-          type="password"
           autoComplete="new-password"
+          defaultValue=""
+          isSubmitted={isSubmitted}
+          minLength={8}
+          name="password"
           placeholder="Password"
+          required
+          type="password"
+          validate={(input: HTMLInputElement): string =>
+            input.validity.valueMissing
+              ? "Password cannot be empty"
+              : input.validity.tooShort
+                ? "Password must be at least 8 characters"
+                : ""
+          }
         />
         <button
           className={cn(
