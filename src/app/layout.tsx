@@ -51,6 +51,7 @@ const RootLayout = ({ children }: Props) => {
     >
       <body
         className={cn(
+          "px-6",
           "bg-[#FF7979] bg-[url('/asset/image/background-mobile.svg')] bg-center",
           "dt:bg-[url('/asset/image/background-desktop.svg')]",
         )}
