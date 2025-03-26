@@ -24,8 +24,7 @@ export const Form = memo(({ className }: Props) => {
         console.debug(Object.fromEntries(formData));
       }}
       className={cn(
-        "p-6 shadow-[0_0.5rem_rgba(0,0,0,0.15)]",
-        "w-full max-w-135 rounded-[0.625rem] bg-white",
+        "rounded-[0.625rem] bg-white p-6 shadow-[0_0.5rem_rgba(0,0,0,0.15)]",
         className,
       )}
     >
