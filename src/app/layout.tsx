@@ -52,12 +52,12 @@ const RootLayout = ({ children }: Props) => {
     >
       <body
         className={cn(
-          "px-6",
+          "grid min-h-screen place-items-center px-6 pt-22 pb-17 dt:py-16",
           "bg-[#FF7979] bg-[url('/asset/image/background-mobile.svg')] bg-center",
           "dt:bg-[url('/asset/image/background-desktop.svg')]",
         )}
       >
-        <main className="grid min-h-screen place-items-center">{children}</main>
+        <main>{children}</main>
         <Noscript />
       </body>
     </html>
