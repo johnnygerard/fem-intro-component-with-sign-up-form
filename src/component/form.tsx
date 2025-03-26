@@ -31,6 +31,7 @@ export const Form = memo(({ className }: Props) => {
     >
       <div className="flex flex-col gap-4 dt:gap-5">
         <FormField
+          aria-label="First Name"
           autoComplete="given-name"
           defaultValue=""
           isSubmitted={isSubmitted}
@@ -43,6 +44,7 @@ export const Form = memo(({ className }: Props) => {
           }
         />
         <FormField
+          aria-label="Last Name"
           autoComplete="family-name"
           defaultValue=""
           isSubmitted={isSubmitted}
@@ -55,6 +57,7 @@ export const Form = memo(({ className }: Props) => {
           }
         />
         <FormField
+          aria-label="Email Address"
           autoComplete="email"
           defaultValue=""
           isSubmitted={isSubmitted}
@@ -71,6 +74,7 @@ export const Form = memo(({ className }: Props) => {
           }
         />
         <FormField
+          aria-label="Password"
           autoComplete="new-password"
           defaultValue=""
           isSubmitted={isSubmitted}
