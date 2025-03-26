@@ -8,6 +8,7 @@ import { memo, ReactNode } from "react";
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-poppins",
 });
