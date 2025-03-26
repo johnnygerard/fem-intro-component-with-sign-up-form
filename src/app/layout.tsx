@@ -57,7 +57,7 @@ const RootLayout = ({ children }: Props) => {
           "dt:bg-[url('/asset/image/background-desktop.svg')]",
         )}
       >
-        {children}
+        <main className="grid min-h-screen place-items-center">{children}</main>
         <Noscript />
       </body>
     </html>

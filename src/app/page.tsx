@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const HomePage = () => {
   return (
-    <div className="grid min-h-screen place-items-center">
+    <div>
       <Form />
     </div>
   );
