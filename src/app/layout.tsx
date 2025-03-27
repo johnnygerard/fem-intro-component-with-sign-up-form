@@ -17,7 +17,9 @@ const APP_NAME = "Intro component with sign-up form";
 const DESCRIPTION = `Frontend Mentor challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com/placeholder"),
+  metadataBase: new URL(
+    "https://fem-intro-component-with-sign-up-form-jgerard.vercel.app",
+  ),
   title: {
     template: `%s | ${APP_NAME}`,
     default: APP_NAME,
