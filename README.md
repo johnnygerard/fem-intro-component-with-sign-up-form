@@ -1,11 +1,12 @@
-# Next.js 15 Starter
+# Frontend Mentor | Intro Component with Sign-Up Form
 
-This starter repository facilitates the creation of new Next.js projects using the configuration described below.  
-To learn how to use a GitHub template repository, check out [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+This is my solution to
+the [Intro component with sign-up form challenge](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp)
+from [Frontend Mentor](https://www.frontendmentor.io/).
 
-![project status](https://img.shields.io/badge/status-work_in_progress-red?style=for-the-badge)
-[![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://starter-nextjs-15.vercel.app/)
-![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)
+[![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)](https://www.frontendmentor.io/solutions/server-side-validation-with-server-action-2nGYb1IRSc)
+[![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://fem-intro-component-with-sign-up-form-jgerard.vercel.app/)
+[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=b4895bf9e89fb020c6ccf87a74777b40)
 
 ## Tech Stack
 
@@ -17,21 +18,6 @@ To learn how to use a GitHub template repository, check out [Creating a reposito
 ### Backend
 
 - **CDN**: Static assets served from [Vercel Edge Network](https://vercel.com/docs/edge-network/overview).
-
-### Testing
-
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-
-## How to Update
-
-To check for outdated packages, run `npm outdated`.
-
-```bash
-# Update dependencies (this will rewrite package-lock.json and package.json)
-npm update --save
-npm install --save-exact --save-dev prettier@latest prettier-plugin-tailwindcss@latest
-```
 
 ## Dev Environment & Tools
 
