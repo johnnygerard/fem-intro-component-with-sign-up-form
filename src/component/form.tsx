@@ -22,7 +22,7 @@ export const Form = memo(({ className }: Props) => {
         event.preventDefault();
       }}
       className={cn(
-        "rounded-[0.625rem] bg-white p-6 shadow-[0_0.5rem_rgba(0,0,0,0.15)]",
+        "rounded-[0.625rem] bg-white p-6 shadow-[0_0.5rem_rgba(0,0,0,0.15)] dt:p-10",
         className,
       )}
     >
