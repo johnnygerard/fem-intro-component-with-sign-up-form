@@ -1,18 +1,20 @@
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
 
-const geistSans = Geist({
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
   display: "swap",
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-poppins",
 });
 
-const APP_NAME = "placeholder";
-const DESCRIPTION = "placeholder";
+const APP_NAME = "Intro component with sign-up form";
+const DESCRIPTION = `Frontend Mentor challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com/placeholder"),
@@ -45,11 +47,17 @@ type Props = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html
-      className={cn(geistSans.variable, "font-sans antialiased")}
+      className={cn(poppins.variable, "font-sans antialiased")}
       lang="en-US"
     >
-      <body>
-        {children}
+      <body
+        className={cn(
+          "grid min-h-screen place-items-center px-6 pt-22 pb-17 dt:py-16",
+          "bg-[#FF7979] bg-[url('/asset/image/background-mobile.svg')] bg-center",
+          "dt:bg-[url('/asset/image/background-desktop.svg')]",
+        )}
+      >
+        <main>{children}</main>
         <Noscript />
       </body>
     </html>
