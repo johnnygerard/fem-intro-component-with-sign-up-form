@@ -1,4 +1,5 @@
 "use client";
+import { subscribe } from "@/app/actions";
 import { FormField } from "@/component/form-field";
 import { cn } from "@/util/cn";
 import Link from "next/link";
@@ -13,15 +14,12 @@ export const Form = memo(({ className }: Props) => {
 
   return (
     <form
+      action={subscribe}
       noValidate
       onSubmit={(event) => {
-        event.preventDefault();
-        const form = event.currentTarget;
         setIsSubmitted(true);
-        if (!form.checkValidity()) return;
-
-        const formData = new FormData(form);
-        console.debug(Object.fromEntries(formData));
+        if (event.currentTarget.checkValidity()) return;
+        event.preventDefault();
       }}
       className={cn(
         "rounded-[0.625rem] bg-white p-6 shadow-[0_0.5rem_rgba(0,0,0,0.15)]",
