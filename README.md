@@ -1,7 +1,7 @@
 # Frontend Mentor | Intro Component with Sign-Up Form
 
 This is my solution to
-the [Intro component with sign-up form challenge](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp)
+the [Intro component with sign-up form challenge](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1)
 from [Frontend Mentor](https://www.frontendmentor.io/).
 
 [![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)](https://www.frontendmentor.io/solutions/server-side-validation-with-server-action-2nGYb1IRSc)
