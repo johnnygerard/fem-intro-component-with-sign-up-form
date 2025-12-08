@@ -4,10 +4,6 @@ This is my solution to
 the [Intro component with sign-up form challenge](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1)
 from [Frontend Mentor](https://www.frontendmentor.io/).
 
-[![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)](https://www.frontendmentor.io/solutions/server-side-validation-with-server-action-2nGYb1IRSc)
-[![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://fem-intro-component-with-sign-up-form-jgerard.vercel.app/)
-[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=b4895bf9e89fb020c6ccf87a74777b40)
-
 ## Tech Stack
 
 ### Frontend
